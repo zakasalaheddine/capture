@@ -1,5 +1,5 @@
+import AboutSection from "../components/about-section";
+
 export default function Home() {
-  return <div>
-    <h1>Film</h1>
-  </div>;
+  return <AboutSection />;
 }
