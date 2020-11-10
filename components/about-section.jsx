@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Container, Description, Hide, Image } from "../styles/styles";
 
 export default function AboutSection() {
   return (
-    <About>
+    <Container>
       <Description>
         <div className="title">
           <Hide>
@@ -26,37 +27,6 @@ export default function AboutSection() {
       <Image>
         <img src="/img/home1.png" alt="Guy with a camera" />
       </Image>
-    </About>
+    </Container>
   );
 }
-
-const About = styled.div`
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 10rem;
-  color: white;
-`;
-
-const Description = styled.div`
-  flex: 1;
-  padding-right: 5rem;
-  h2 {
-    font-weight: lighter;
-  }
-`;
-
-const Image = styled.div`
-  flex: 1;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-  }
-`;
-
-const Hide = styled.div`
-  overflow: hidden;
-`;
