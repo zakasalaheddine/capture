@@ -1,7 +1,10 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
 export default function Nav() {
+  const { pathname } = useRouter();
   return (
     <StyledNav>
       <h1>
@@ -14,16 +17,31 @@ export default function Nav() {
           <Link href="/">
             <a>1. About Us</a>
           </Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/" ? "50%" : "0%" }}
+          />
         </li>
         <li>
           <Link href="/work">
             <a>2. Our Work</a>
           </Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
+          />
         </li>
         <li>
           <Link href="/contact-us">
             <a>3. Contact Us</a>
           </Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/contact-us" ? "50%" : "0%" }}
+          />
         </li>
       </ul>
     </StyledNav>
@@ -74,5 +92,17 @@ const StyledNav = styled.nav`
         padding: 0;
       }
     }
+  }
+`;
+
+const Line = styled(motion.div)`
+  height: 0.3rem;
+  background-color: #23d997;
+  width: 0%;
+  position: absolute;
+  bottom: -80%;
+  left: 60%;
+  @media (max-width: 1300px) {
+    left: 0%;
   }
 `;
