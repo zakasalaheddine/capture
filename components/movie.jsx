@@ -8,12 +8,7 @@ import { useScroll } from "../hooks/useScroll";
 export default function Movie({ movie }) {
   const [element, controls] = useScroll();
   return (
-    <MovieContainer
-      ref={element}
-      variants={fade}
-      animate={controls}
-      initial="hidden"
-    >
+    <MovieContainer>
       <motion.h2 variants={fade}>{movie.title}</motion.h2>
       <motion.div variants={lineAnimation} className="line"></motion.div>
       <Link href={`/work/${movie.slug}`}>
@@ -30,7 +25,7 @@ export default function Movie({ movie }) {
     </MovieContainer>
   );
 }
-const MovieContainer = styled(motion.div)`
+const MovieContainer = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
