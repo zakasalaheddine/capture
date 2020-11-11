@@ -50,13 +50,17 @@ export const photoAnimation = {
   hidden: {
     scale: 1.5,
     opacity: 0,
+    transition: {
+      ease: "easeOut",
+      duration: 1,
+    },
   },
   show: {
     scale: 1,
     opacity: 1,
     transition: {
       ease: "easeOut",
-      duration: 0.75,
+      duration: 1,
     },
   },
 };

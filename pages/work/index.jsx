@@ -1,15 +1,8 @@
 import styled from "styled-components";
-import Link from "next/link";
 import { getMovies } from "../../data";
 import { motion } from "framer-motion";
-import {
-  fade,
-  lineAnimation,
-  pageAnimation,
-  photoAnimation,
-  slider,
-} from "../../animation";
-import { Hide } from "../../styles/styles";
+import { pageAnimation, slider } from "../../animation";
+import Movie from "../../components/movie";
 
 export default function OurWork({ movies }) {
   return (
@@ -25,21 +18,7 @@ export default function OurWork({ movies }) {
       <Frame3 variants={slider} />
       <Frame4 variants={slider} />
       {movies.map((movie) => (
-        <MovieContainer key={movie.slug}>
-          <motion.h2 variants={fade}>{movie.title}</motion.h2>
-          <motion.div variants={lineAnimation} className="line"></motion.div>
-          <Link href={`/work/${movie.slug}`}>
-            <a>
-              <Hide>
-                <motion.img
-                  variants={photoAnimation}
-                  src={movie.mainImg}
-                  alt={movie.title}
-                />
-              </Hide>
-            </a>
-          </Link>
-        </MovieContainer>
+        <Movie movie={movie} key={movie.slug} />
       ))}
     </WorkContainer>
   );
@@ -51,20 +30,6 @@ const WorkContainer = styled(motion.div)`
   padding: 5rem 10rem;
   h2 {
     padding: 1rem 0rem;
-  }
-`;
-
-const MovieContainer = styled.div`
-  padding-bottom: 10rem;
-  .line {
-    height: 0.5rem;
-    background-color: #23d997;
-    margin-bottom: 3rem;
-  }
-  img {
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
   }
 `;
 
