@@ -1,10 +1,17 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
+import { pageAnimation } from "../../animation";
 import Award from "../../components/award";
 import { getMovies } from "../../data";
 
 export default function MovieDetail({ movie }) {
   return (
-    <Details>
+    <Details
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <HeadLine>
         <h1>{movie.title}</h1>
         <img src={movie.mainImg} alt={movie.title} />
@@ -21,7 +28,7 @@ export default function MovieDetail({ movie }) {
   );
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 const HeadLine = styled.div`

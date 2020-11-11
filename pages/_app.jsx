@@ -1,12 +1,15 @@
+import { AnimatePresence } from "framer-motion";
 import Nav from "../components/nav";
 import { GlobalStyle } from "../styles/global-styles";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <GlobalStyle />
       <Nav />
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
     </>
   );
 }
