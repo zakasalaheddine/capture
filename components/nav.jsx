@@ -6,7 +6,7 @@ export default function Nav() {
     <StyledNav>
       <h1>
         <Link href="/">
-          <Logo>Capture</Logo>
+          <a id="logo">Capture</a>
         </Link>
       </h1>
       <ul>
@@ -16,12 +16,12 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/work">
             <a>2. Our Work</a>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/contact-us">
             <a>3. Contact Us</a>
           </Link>
         </li>
@@ -51,10 +51,9 @@ const StyledNav = styled.nav`
     padding-left: 10rem;
     position: relative;
   }
-`;
-
-const Logo = styled.a`
-  font-size: 1.5rem;
-  font-family: "Lobster", cursive;
-  font-weight: lighter;
+  #logo {
+    font-size: 1.5rem;
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+  }
 `;
