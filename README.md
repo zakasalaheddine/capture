@@ -1,6 +1,6 @@
 [![Image of CAPTURE](https://github.com/zakasalaheddine/capture/blob/main/public/img/video.gif)](https://github.com/zakasalaheddine/capture)
 
-# ZAKADEV PLAYER [DEMO](https://zakasalaheddine.github.io/music-player/)
+# CAPTURE
 
 SIMPLE NEXT JS APPLICATION WITH ALL PAGES ARE STATIC GENERATED, FOLLOWING DEV ED COURSE PROJECT WITH SOME TWEAKS BY ME
 
