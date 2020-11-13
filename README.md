@@ -1,30 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Image of CAPTURE](https://github.com/zakasalaheddine/capture/blob/main/public/img/video.gif)](https://github.com/zakasalaheddine/capture)
 
-## Getting Started
+# ZAKADEV PLAYER [DEMO](https://zakasalaheddine.github.io/music-player/)
 
-First, run the development server:
+SIMPLE NEXT JS APPLICATION WITH ALL PAGES ARE STATIC GENERATED, FOLLOWING DEV ED COURSE PROJECT WITH SOME TWEAKS BY ME
 
-```bash
-npm run dev
-# or
-yarn dev
+
+## Main tech used to complete this project
+- NEXT JS
+- STYLED COMPONENTS
+- COSTUM HOOKS
+- FRAMER MOTION
+- MEDIA QUERIES FOR MOBILE RESPONSIVE
+
+
+### Installation
+1- Clone this repo
+2- Install the dependencies and devDependencies and start the application.
+
+#### Using NPM
+```sh
+$ cd music-player
+$ npm install
+$ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Using YARN
+```sh
+$ cd music-player
+$ yarn
+$ yarn dev
+```
