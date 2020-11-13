@@ -3,24 +3,28 @@ import { getMovies } from "../../data";
 import { motion } from "framer-motion";
 import { pageAnimation, slider } from "../../animation";
 import Movie from "../../components/movie";
+import HeadInfo from "../../components/head-info";
 
 export default function OurWork({ movies }) {
   return (
-    <WorkContainer
-      variants={pageAnimation}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-      style={{ backgroundColor: "#FFFFFF" }}
-    >
-      <Frame1 variants={slider} />
-      <Frame2 variants={slider} />
-      <Frame3 variants={slider} />
-      <Frame4 variants={slider} />
-      {movies.map((movie) => (
-        <Movie movie={movie} key={movie.slug} />
-      ))}
-    </WorkContainer>
+    <>
+      <HeadInfo title="Our Works" />
+      <WorkContainer
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+        style={{ backgroundColor: "#FFFFFF" }}
+      >
+        <Frame1 variants={slider} />
+        <Frame2 variants={slider} />
+        <Frame3 variants={slider} />
+        <Frame4 variants={slider} />
+        {movies.map((movie) => (
+          <Movie movie={movie} key={movie.slug} />
+        ))}
+      </WorkContainer>
+    </>
   );
 }
 

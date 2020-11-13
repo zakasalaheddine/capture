@@ -2,29 +2,33 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { pageAnimation } from "../../animation";
 import Award from "../../components/award";
+import HeadInfo from "../../components/head-info";
 import { getMovies } from "../../data";
 
 export default function MovieDetail({ movie }) {
   return (
-    <Details
-      variants={pageAnimation}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-    >
-      <HeadLine>
-        <h1>{movie.title}</h1>
-        <img src={movie.mainImg} alt={movie.title} />
-      </HeadLine>
-      <Awards>
-        {movie.awards.map((award, idx) => (
-          <Award key={idx} award={award} />
-        ))}
-      </Awards>
-      <ImageDisplay>
-        <img src={movie.secondaryImg} alt={movie.title} />
-      </ImageDisplay>
-    </Details>
+    <>
+      <HeadInfo title={movie.title} />
+      <Details
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
+        <HeadLine>
+          <h1>{movie.title}</h1>
+          <img src={movie.mainImg} alt={movie.title} />
+        </HeadLine>
+        <Awards>
+          {movie.awards.map((award, idx) => (
+            <Award key={idx} award={award} />
+          ))}
+        </Awards>
+        <ImageDisplay>
+          <img src={movie.secondaryImg} alt={movie.title} />
+        </ImageDisplay>
+      </Details>
+    </>
   );
 }
 
